@@ -1,0 +1,15 @@
+<h1>Products</h1>
+
+<ul>
+  <li *ngFor="let c of products">
+    <img src = '{{c.ph_product}}' width="600" height="400">
+    <p>№{{c.id}}<br> {{c.name}} <br> {{c.description}} <br> {{c.price}}</p>
+    <fieldset style = "width: 1200px;">
+      <input type="text" [(ngModel)]="c.description" style = "width: 1100px;">
+      <button (click)="updateProduct()" class = "bt">Save</button>
+    </fieldset>
+    <button type="button" (click)="addToCart(c)">Buy</button>
+  </li>
+</ul>
+
+

@@ -1,1 +1,13 @@
-<p>del works!</p>
+<h1>Delivery company</h1>
+
+<ul>
+  <li *ngFor="let d of deliveries">
+    <img src = '{{d.ph_delivery}}' width="1000" height="400">
+    <p>id: {{d.id}}, name: {{d.name}}, rating: {{d.rating}}</p>
+    <p><a routerLink="/delivery_companies/restaurants">{{d.id}}) {{d.name}}</a></p>
+    <fieldset style = "width: 90px;">
+      <input type="text" [(ngModel)]="d.rating" style = "width: 30px;">
+      <button (click)="updateDelivery()" class = "bt">Save</button>
+    </fieldset>
+  </li>
+</ul>

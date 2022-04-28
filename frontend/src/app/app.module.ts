@@ -8,19 +8,33 @@ import { RestComponent } from './rest/rest.component';
 import { CatgComponent } from './catg/catg.component';
 import { BacketComponent } from './backet/backet.component';
 
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import {AuthInterceptor} from './AuthInterceptor';
+import { ProductComponent } from './product/product.component';
+ 
 @NgModule({
   declarations: [
     AppComponent,
     DelComponent,
     RestComponent,
     CatgComponent,
-    BacketComponent
+    BacketComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

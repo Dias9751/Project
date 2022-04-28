@@ -1,15 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { CompanyService } from '../company.service';
 
 @Component({
   selector: 'app-backet',
   templateUrl: './backet.component.html',
   styleUrls: ['./backet.component.css']
 })
-export class BacketComponent implements OnInit {
+export class BacketComponent {
+  items = this.companyService.getItems();
 
-  constructor() { }
+  constructor(
+              private companyService: CompanyService,
+              private formBuilder: FormBuilder,
+  ) { }
+  
+  checkoutForm = this.formBuilder.group({
+    name: '',
+    address: ''
+  }); 
 
-  ngOnInit(): void {
+  onSubmit(): void {
+    // Process checkout data here
+    this.items = this.companyService.clearCart();
+    console.warn('Your order has been submitted', this.checkoutForm.value);
+    this.checkoutForm.reset();
   }
 
 }
