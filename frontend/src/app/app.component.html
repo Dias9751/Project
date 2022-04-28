@@ -1,16 +1,38 @@
 
-<div *ngIf="!logged">
+<!--<div *ngIf="!logged">
   <h1>Login form</h1>
   <p>Username: <input type="text" [(ngModel)]="username"></p>
   <p>Password: <input type="text" [(ngModel)]="password"></p>
   <button (click)="login()">Login</button>
+</div>-->
+
+<div *ngIf="!logged">
+<div class="main">
+  <div class="form">
+  <div class="form-content"> 
+      <div class="title">Вход</div>
+      <div class="form-group">
+          <input type="email" placeholder="Ваше почта" id="input-email" [(ngModel)]="username">
+          <span style="display:none" id="invalid_email">Введите ваш email</span>
+      </div>
+      <div class="form-group">
+          <input type="password" placeholder="Пароль" id="input-password" [(ngModel)]="password">
+          <span style="display:none" id="invalid_password">Введите ваш пароль</span>
+      </div>
+      <div class="form-group" (click)="login()"><button>Войти</button></div>
+  </div>
+  </div>
+</div>
 </div>
 
+
 <div *ngIf="logged">
+  <header>
   <a routerLink='/delivery_companies/restaurants/categories'>
     <h1>My Store</h1>
 </a>
-<a routerLink='/backet'><i class="material-icons">shopping_cart</i>Checkout</a>
+<a routerLink='/backet' class="cor"><i class="material-icons">shopping_cart</i>Checkout</a>
+</header>
   <router-outlet></router-outlet>
   <button (click)="logout()">Logout</button>
 </div>

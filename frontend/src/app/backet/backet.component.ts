@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { CompanyService } from '../company.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-backet',

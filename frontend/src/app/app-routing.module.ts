@@ -7,11 +7,11 @@ import { ProductComponent } from './product/product.component';
 import { BacketComponent } from './backet/backet.component';
 
 const routes: Routes = [
+  {path: 'backet', component: BacketComponent},
   {path: 'delivery_companies', component: DelComponent},
   {path: 'delivery_companies/restaurants', component: RestComponent},
   {path: 'delivery_companies/restaurants/categories', component: CatgComponent},
   {path: 'delivery_companies/restaurants/categories/:id', component: ProductComponent},
-  {path: 'backet', component: BacketComponent}
 ];
 
 @NgModule({

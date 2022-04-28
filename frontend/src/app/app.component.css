@@ -1,3 +1,119 @@
 body{
     text-align: center;
   }
+
+  .main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ebebed;
+} 
+.form{
+    width: 30%;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+   background: #ffffff;
+   box-shadow: 0px 4px 20px rgba(73, 69,255,0.2);
+   border-radius: 10px; 
+}
+.form-content{
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-title{
+    padding-top:30px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color:#2b2a2a;
+}
+.form-group{
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+input{
+  max-width: 100%;
+  background:#f7f7f8 ;
+  border-radius: 10px;
+  border:none;
+  height: 50px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #676767;
+
+}
+button{
+  background: linear-gradient(180deg, #716fff 0%, #4945ff 100%);
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.02cm;
+  color: #f7f7f8;
+  border: none;
+  padding: 17px 14px;
+}
+#input-name{
+  background-image: url("https://res.cloudinary.com/teepublic/image/private/s--PRfjd23A--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_7a7e41,e_outline:48/co_7a7e41,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_313,q_90,w_313/v1574655465/production/designs/6879567_0");
+  background-size: 25px;
+}
+#input-email{
+  background-image: url("https://go.imgsmail.ru/imgpreview?key=2c39780ddcbf6738&mb=imgdb_preview_exp");
+  background-size: 25px;
+}
+#input-password{
+  background-image: url("https://icon-library.com/images/key-icon/key-icon-12.jpg");
+  background-size: 25px;
+}
+input[type='text'],[type='email'],[type='password']{
+  background-repeat: no-repeat;
+  background-position: 20px;
+  padding: 5px 50px;
+
+}
+span{
+  padding-top: 5px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #f34141;
+}
+.invalid{
+    border:1px solid #f34141;
+}
+
+header{
+  background-color: #716fff;
+  padding: -1px;
+}
+a{
+  color: white;
+  font-size: 2rem
+}
+.cor{
+  position: relative;
+  left: 1170px;
+  font-size: 3rem;
+  top: -23px;
+}
+h1{
+  position: relative;
+  top: 23px;
+  left: 11px;
+}
