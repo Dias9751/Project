@@ -1,13 +1,14 @@
-<h1>Restaurant</h1>
+<h1 class="rest">Restaurant</h1>
 
-<ul>
-  <li *ngFor="let r of restaurants">
-    <img src = '{{r.ph_restaurant}}' width="1000" height="400">
+<div>
+  <div class = "rest-info" *ngFor="let r of restaurants">
+    <img class="img-rest" src = '{{r.ph_restaurant}}' width="1000" height="400">
     <p>id: {{r.id}}, name: {{r.name}}, description: {{r.description}}, city: {{r.city}}, address: {{r.address}}</p>
     <p><a routerLink="/delivery_companies/restaurants/categories">{{r.id}}) {{r.name}}</a></p>
     <fieldset style = "width: 1200px;">
       <input type="text" [(ngModel)]="r.address" style = "width: 1100px;">
       <button (click)="updateRestaurant()" class = "bt">Save</button>
     </fieldset>
-  </li>
-</ul>
+  </div>
+</div>
+<br><br>

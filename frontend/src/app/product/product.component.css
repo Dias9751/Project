@@ -1,0 +1,60 @@
+body{
+    background-image: url("https://kroosp.ru/wp-content/uploads/2018/05/restorany.jpg");
+}
+
+.Product{
+    text-align: center;
+}
+.img{
+    position: relative;
+    padding-left: 400px;
+    left: -210px;
+    text-align: center;
+} 
+.id{
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+}
+.bt1{
+    background: linear-gradient(180deg, #716fff 0%, #4945ff 100%);
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1px;
+    text-align: center;
+    letter-spacing: 0.02cm;
+    color: #f7f7f8;
+    border: none;
+    padding: 17px 14px;
+    text-align: center;
+}
+ .bt2{
+    background: linear-gradient(180deg, #716fff 0%, #4945ff 100%);
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1px;
+    text-align: center;
+    letter-spacing: 0.02cm;
+    color: #f7f7f8;
+    border: none;
+    padding: 17px 17px;
+    margin-top: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.rest-info{
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    background-color: #FAE7B5; 
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    
+}
